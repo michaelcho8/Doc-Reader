@@ -36,8 +36,10 @@ def preprocess_images():
     file_path = os.path.join(NEW_IMAGES_DIR, "handwritten test.jpg")
     png_filename = os.path.splitext(filename)[0] + ".png"
 
+    # Create directory for preprocessed images
     os.makedirs(PREPROCESSED_IMAGES_DIR, exist_ok=True)
 
+    # For each file in new_images_dir
     for filename in os.listdir(NEW_IMAGES_DIR):
         file_path = os.path.join(NEW_IMAGES_DIR, filename)
         png_filename = os.path.splitext(filename)[0] + ".png"
